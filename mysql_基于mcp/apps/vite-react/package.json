@@ -1,0 +1,40 @@
+{
+  "name": "vite-react",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc && vite build",
+    "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@ant-design/icons": "catalog:icons",
+    "@ant-design/x": "catalog:frontend",
+    "@tailwindcss/vite": "catalog:build",
+    "@types/markdown-it": "catalog:types",
+    "@types/uuid": "catalog:types",
+    "antd": "catalog:prod",
+    "antd-style": "catalog:prod",
+    "axios": "catalog:network",
+    "dayjs": "catalog:utils",
+    "markdown-it": "catalog:markdown",
+    "react": "catalog:prod",
+    "react-dom": "catalog:prod",
+    "tailwindcss": "catalog:style",
+    "uuid": "catalog:prod"
+  },
+  "devDependencies": {
+    "@types/react": "catalog:types",
+    "@types/react-dom": "catalog:types",
+    "@typescript-eslint/eslint-plugin": "catalog:types",
+    "@typescript-eslint/parser": "catalog:types",
+    "@vitejs/plugin-react": "catalog:build",
+    "eslint": "catalog:lint",
+    "eslint-plugin-react-hooks": "catalog:lint",
+    "eslint-plugin-react-refresh": "catalog:lint",
+    "typescript": "catalog:dev",
+    "vite": "catalog:build"
+  }
+}

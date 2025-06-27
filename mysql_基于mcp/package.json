@@ -1,0 +1,35 @@
+{
+  "name": "mcp-lab-06",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ECNU MCP Lab 06 - Turborepo多包架构",
+  "author": "floatDreamer",
+  "license": "ISC",
+  "packageManager": "pnpm@9.5.0",
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "start": "turbo dev --filter=vite-react --filter=express-server",
+    "start:all": "concurrently \"cd apps/express-server && npm run dev\" \"cd apps/vite-react && npm run dev\"",
+    "start:frontend": "cd apps/vite-react && npm run dev",
+    "start:backend": "cd apps/express-server && npm run dev",
+    "lint": "turbo run lint",
+    "clean": "turbo clean",
+    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
+    "dev:react": "turbo dev --filter=vite-react",
+    "dev:server": "turbo dev --filter=express-server",
+    "dev:mcp": "turbo dev --filter=mysql-mcp"
+  },
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "devDependencies": {
+    "prettier": "catalog:lint",
+    "turbo": "catalog:monorepo",
+    "concurrently": "catalog:dev"
+  }
+}
