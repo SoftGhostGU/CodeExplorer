@@ -1,0 +1,13 @@
+output.txt 
+node_modules
+dist 
+.mastra 
+.env.development 
+.env 
+*.db 
+*.db-* 
+.cursor
+.vscode
+mysql-mcp-server
+logs
+.turbo
